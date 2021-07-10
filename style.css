@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.maincont{
+    background : url(image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    width: 100vw;
+}
+
+.subcont{
+    color: #cc3838;
+    height: 10vh;
+    width: 50vw;
+    position: absolute;
+    top: 10vh;
+    left: 25vw;
+    font-size: 53px;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 2px blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scorecont{
+    height: 5vh;
+    width: 12vw;
+    position: absolute;
+    top: 10vh;
+    right: 10vw;
+    border: 2px solid #00ffd7;
+    box-sizing: border-box;
+    font-size: 25px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    padding-left: 11px;
+    box-shadow: -1px -1px 1px 1px  #002eff;
+    border-radius: 10px;
+    color: #d2d8a0
+}
+
+.player{
+    background-image: url(player.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 30vh;
+    width: 10vw;
+    bottom: 0;
+    left: 10vw;
+}
+
+.playerAni{
+    animation: pAni 0.8s 1 alternate forwards;
+}    
+
+.enemy{
+    position: absolute;
+    height: 20vh;
+    width: 10vw;
+    bottom: 0;
+    right: 10vw;
+    background-image: url(mouse.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.enemyAni{
+    animation: enemyAni 3s infinite;
+}
+
+.endAni{
+    background-image: url(pend.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: ending 2s;
+}
+
+@keyframes ending {
+    0%{
+        width: 200px;
+        height: 200px;
+    }
+
+    50%{
+        width: 300px;
+        height: 300px;
+    }
+
+    100%{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@keyframes pAni {
+    0%{
+        bottom: 0;
+    }
+
+    50%{
+        bottom: 40vh;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes enemyAni {
+    0%{
+        right: 0;
+    }
+
+    100%{
+        right: 100vw;
+    }
+}
